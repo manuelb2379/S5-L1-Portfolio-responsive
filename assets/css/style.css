@@ -55,7 +55,7 @@ header {
   color: #ffffff;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 60px 20px 30px 20px;
+  padding: 30px 16px 20px 16px;
   border-bottom: 4px solid hsl(45, 90%, 60%);
 }
 
@@ -63,8 +63,7 @@ header {
 main {
   max-width: 920px;
   margin: 0 auto;
-  position: relative;
-  padding: 60px 40px 60px 40px;
+  padding: 16px;
 }
 
 /*font-family particolari*/
@@ -79,14 +78,14 @@ h3 {
   display: inline-block;
   padding: 0 12px;
   margin: 0;
+  text-align: center;
 }
 
 nav ul li {
-  padding: 0;
-  margin: 0px 4px;
+  padding: 10px;
+  margin: 4px;
   border-radius: 4px;
-  vertical-align: center;
-  display: inline;
+  display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
   padding: 10px 15px;
@@ -119,7 +118,7 @@ nav ul li:hover a {
 
 /*h1*/
 #start {
-  font-size: 60px;
+  font-size: clamp(2rem, 8vw, 60px);
 }
 /*elemento prima ogni di h2*/
 section h2::before {
@@ -147,11 +146,11 @@ section h2 {
   height: 120px;
   border: 5px solid hsl(45, 90%, 60%);
   border-radius: 50%;
-  float: left;
-  margin: 0 20px;
+  display: block;
+  margin: 0 auto;
 }
 
-/*prima lettera di chi-son*/
+/*prima lettera di chi-son
 .intro::first-letter {
   font-family: "Playfair Display", Georgia, serif;
   color: hsl(220, 60%, 25%);
@@ -161,6 +160,7 @@ section h2 {
   margin-right: 6px;
   line-height: 0.5;
 }
+nella prima in mobile non c'è*/
 
 /*tabella competenze*/
 .comp-title {
@@ -182,6 +182,15 @@ section h2 {
   width: 100%;
   border-collapse: collapse;
 }
+
+.table-wrapper{
+    overflow-x: auto;
+}
+
+.table-wrapper .table {
+  min-width: 480px;
+}
+
 #table-com th {
   width: 50%;
   border-bottom: 1px solid #ece6d8;
@@ -194,10 +203,9 @@ section h2 {
   border-bottom: 1px solid #ece6d8;
 }
 /*tabella esperienze*/
-#cap-e{
+#cap-e {
   color: hsl(220, 30%, 40%);
   font-style: italic;
-  
 }
 
 #e-tab th {
@@ -284,7 +292,7 @@ section h2 {
   text-decoration: underline hsl(45, 90%, 50%);
 }
 /*new del primo progetto*/
-.new{
+.new {
   background-color: red;
   color: white;
   font-size: 0.7rem;
@@ -292,23 +300,32 @@ section h2 {
   padding: 5px 12px;
   border-radius: 3px;
   margin-left: 10px;
-  font-family: "Inter", Arial, sans-serif;;
+  font-family: "Inter", Arial, sans-serif;
 }
 /*form*/
 
 input,
 textarea,
 select {
-  width: 100%;
+    /*rimosso il width per darlo anche al button*/
   background-color: #fbf8f1;
   border-radius: 2px;
   border: 1px solid #d6cfbf;
 }
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  font-size: 16px;
+}
+ 
 input:focus,
 textarea:focus,
 select:focus {
   background-color: white;
-  border: hsl(220, 60%, 30%);
+  border: 1px solid hsl(220, 60%, 30%);
 }
 
 label {
@@ -323,7 +340,7 @@ label {
   color: white;
   background-color: hsl(220, 60%, 30%);
   font-weight: bold;
-  width: 18%;
+ /*rimosso width per poi portarlo a 768px*/
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
@@ -331,7 +348,7 @@ label {
 }
 
 .send:hover {
-  background-color: sfondo hsl(220, 60%, 45%);
+  background-color: hsl(220, 60%, 45%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 /* footer */
@@ -389,4 +406,47 @@ label {
 
 .thank-you {
   min-height: 70vh;
+}
+
+/*inserimento media query per 768px*/
+
+@media (min-width: 768px) {
+    #site-header{
+        padding: 60px 20px 30px 20px;
+    }
+
+    main{
+        padding: 40px 20px;
+    }
+
+    main section {
+    padding: 32px;
+  }
+
+    .avatar {
+    float: left; /* l'avatar torna a sinistra del testo una volta che passa 768px*/
+    margin: 0 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 60%; 
+  }
+
+   button {
+    width: 50%;
+  }
+ 
+  /*re inserimento della first letter*/
+  .intro::first-letter {
+  font-family: "Playfair Display", Georgia, serif;
+  color: hsl(220, 60%, 25%);
+  font-size: 3rem;
+  font-weight: bold;
+  float: left;
+  margin-right: 6px;
+  line-height: 0.5;
+}
+
 }
