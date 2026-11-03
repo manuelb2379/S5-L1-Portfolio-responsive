@@ -19,13 +19,13 @@
 
     <!--Blocco header/nav-->
 
-    <header id="site-header">
+    <header id="siteHeader">
         <h1 id="start">Manuel Burgalassi</h1>
         <p class="tagline"><b>Studente Full Stack</b> corso Epicode 2026 </p>
 
         <nav>
             <ul>
-                <li><a href="#chi-sono"><i class="fa-solid fa-user"></i> Chi sono</a></li>
+                <li><a href="#chiSono"><i class="fa-solid fa-user"></i> Chi sono</a></li>
                 <li><a href="#competenze"><i class="fa-solid fa-gauge"></i> Competenze</a></li>
                 <li><a href="#esperienze"><i class="fa-solid fa-briefcase"></i> Esperienze</a></li>
                 <li><a href="#progetti"><i class="fa-etch fa-solid fa-folder"></i> Progetti</a></li>
@@ -37,7 +37,7 @@
     <!--Blocco main-->
 
     <main>
-        <section id="chi-sono">
+        <section id="chiSono">
             <!--Chi sono-->
             <h2>Chi sono</h2>
 
@@ -58,7 +58,7 @@
 
         </section>
         <div>
-            <p><a href="#start">Torna alla selezione pincipale</a></p>
+            <p><a href="#chiSono">Torna alla selezione pincipale</a></p>
         </div>
         <!--Competenze-->
         <section id="competenze">
@@ -68,14 +68,14 @@
                     sono autovalutazioni, non certificazioni</p>
             </div>
             <div>
-                <p class="comp-title">Stack tecnico <span class="material-symbols-outlined" id="f-line">minimize</span>
+                <p class="compTitle">Stack tecnico <span class="material-symbols-outlined" id="fLine">minimize</span>
                     autovalutazione </p>
             </div>
-            <table class="table" id="table-com">
+            <table class="table" id="tableCom">
                 <thead>
                     <tr>
-                        <th class="comp-tab" scope="col"> Tecnologia</th scope="col">
-                        <th class="comp-tab" scope="col"> Livello</th>
+                        <th class="compTab" scope="col"> Tecnologia</th scope="col">
+                        <th class="compTab" scope="col"> <!--Livello lasciamo la colonna vuota--></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,7 +87,7 @@
                         </td>
                         <td>
                             <div class="bar">
-                                <div class="bar-fill" style="width: 80%"></div>
+                                <div class="barFill" style="width: 80%"></div>
                             </div>
                         </td>
                     </tr>
@@ -100,7 +100,7 @@
                         </td>
                         <td>
                             <div class="bar">
-                                <div class="bar-fill" style="width: 70%"></div>
+                                <div class="barFill" style="width: 70%"></div>
                             </div>
                         </td>
                     </tr>
@@ -112,7 +112,7 @@
                         </td>
                         <td>
                             <div class="bar">
-                                <div class="bar-fill" style="width: 60%"></div>
+                                <div class="barFill" style="width: 60%"></div>
                             </div>
                         </td>
                     </tr>
@@ -124,7 +124,7 @@
                         </td>
                         <td>
                             <div class="bar">
-                                <div class="bar-fill" style="width: 50%"></div>
+                                <div class="barFill" style="width: 50%"></div>
                             </div>
                         </td>
                     </tr>
@@ -137,7 +137,7 @@
 
                         <td>
                             <div class="bar">
-                                <div class="bar-fill" style="width: 70%"></div>
+                                <div class="barFill" style="width: 70%"></div>
                             </div>
                         </td>
                     </tr>
@@ -147,21 +147,21 @@
         </section>
 
         <div>
-            <p><a href="#start">Torna alla selezione pincipale</a></p>
+            <p><a href="#chiSono">Torna alla selezione pincipale</a></p>
         </div>
         <!--Esperienze formative e lavorative-->
         <section id="esperienze">
 
             <h2>Esperienze</h2>
             <p>Un breve riepilogo del mio percorso formativo e lavorativo recente.</p>
-            <div class="table-wrapper">
-                <table class="table" id="e-tab">
-                    <p id="cap-e">Esperienze formative e lavorative</p>
+            <div class="tableWrapper">
+                <table class="table" id="eTab">
+                    <p id="capE">Esperienze formative e lavorative</p>
                     <thead>
                         <tr>
-                            <th scope="col" class="comp-tab">Anno</th>
-                            <th scope="col" class="comp-tab">Ruolo</th>
-                            <th scope="col" class="comp-tab">Azienda</th>
+                            <th scope="col" class="compTab">Anno</th>
+                            <th scope="col" class="compTab">Ruolo</th>
+                            <th scope="col" class="compTab">Azienda</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -186,7 +186,7 @@
         </section>
 
         <div>
-            <p><a href="#start">Torna alla selezione pincipale</a></p>
+            <p><a href="#chiSono">Torna alla selezione pincipale</a></p>
         </div>
         <!--Progetti-->
         <section id="progetti">
@@ -226,68 +226,83 @@
 
         </section>
         <div>
-            <p><a href="#start">Torna alla selezione pincipale</a></p>
+            <p><a href="#chiSono">Torna alla selezione pincipale</a></p>
         </div>
 
 
         <!--Contattami-->
         <section id="contatti">
             <aside>
-                <h2>Contattami</h2>
                 <div>
-                    <p>Compila il seguente form per notificarmi. Ti risponderò entro 24 ore.</p>
+                    <h2>Contattami</h2>
+                    <P>Clicca il bottone sottostante per aprire il form da compilare.</P>
+                    <button type="button" id="apriModale">APRI IL FORM</button>
                 </div>
-                <!--Form da compilare per contattarmi-->
-                <form action="grazie.html" method="get">
-                    <label for="nome">Nome</label>
-                    <div>
-                        <input type="text" placeholder="Il tuo nome" id="nome" name="nome" required>
+
+                <div class="overlay">
+                    <div class="modale">
+                        <button class="posizioneChiusura chiudiModale">✖</button>
+                        <p>Compila il seguente form per notificarmi. Ti risponderò entro 24 ore.</p>
+
+                        <!--Form da compilare per contattarmi-->
+
+                        <form action="grazie.html" method="get">
+                            <label for="nome">Nome</label>
+                            <div>
+                                <input type="text" placeholder="Il tuo nome" id="nome" name="nome" required>
+                            </div>
+                            <br />
+                            <label for="email">Email</label>
+                            <div>
+                                <input type="email" placeholder="esempio@esempio.it" id="email" name="email" required>
+                            </div>
+                            <br />
+                            <label for="why">Motivo del contatto</label>
+                            <div>
+                                <select id="why" name="why" required>
+                                    <option value="" selected></option>
+                                    <option value="ODL">Offerta di lavoro</option>
+                                    <option value="CI">Colloquio informale</option>
+                                    <option value="RI">Richiesta informazioni</option>
+                                </select>
+                            </div>
+                            <br />
+                            <label for="date">Data preferita per la risposta</label>
+                            <div>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <br />
+                            <label for="message">Messaggio</label>
+                            <div>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Scrivi qui il tuo mesaggio...." required></textarea>
+                            </div>
+                            <br />
+                            <div>
+                                <input class="box" type="checkbox" id="recontact" name="recontact" value="on" required>
+                                <label for="recontact">Accetto di essere ricontattato all'indirizzo indicato</label>
+                            </div>
+                            <br />
+                            <button class="send" type="submit"><i class="fas fa-paper-plane"></i> Invia</button>
+                        </form>
                     </div>
-                    <br />
-                    <label for="email">Email</label>
-                    <div>
-                        <input type="email" placeholder="esempio@esempio.it" id="email" name="email" required>
-                    </div>
-                    <br />
-                    <label for="why">Motivo del contatto</label>
-                    <div>
-                        <select id="why" name="why" required>
-                            <option value="" selected></option>
-                            <option value="ODL">Offerta di lavoro</option>
-                            <option value="CI">Colloquio informale</option>
-                            <option value="RI">Richiesta informazioni</option>
-                        </select>
-                    </div>
-                    <br />
-                    <label for="date">Data preferita per la risposta</label>
-                    <div>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <br />
-                    <label for="message">Messaggio</label>
-                    <div>
-                        <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo mesaggio...."
-                            required></textarea>
-                    </div>
-                    <br />
-                    <div>
-                        <input class="box" type="checkbox" id="recontact" name="recontact" value="on" required>
-                        <label for="recontact">Accetto di essere ricontattato all'indirizzo indicato</label>
-                    </div>
-                    <br />
-                    <button class="send" type="submit"><i class="fas fa-paper-plane"></i> Invia</button>
-                </form>
+                </div>
 
             </aside>
         </section>
         <div>
-            <p><a href="#start">Torna alla selezione pincipale</a></p>
+            <p><a href="#chiSono">Torna alla selezione pincipale</a></p>
+        </div>
+        <div class="freccia">
+            <a href="#chiSono">
+                <div id="paginaSu"></div>
+            </a>
         </div>
     </main>
 
     <!--Footer-->
-    <footer id="site-footer">
-        <ul class="icon-foot">
+    <footer id="siteFooter">
+        <ul class="iconFoot">
 
             <li>
                 <a href="javascript:void(0)"><i class="fab fa-github-square"></i></a>
@@ -303,10 +318,12 @@
             </li>
         </ul>
         <p class="scritta"><br>© 2026 Manuel Burgalassi <span class="material-symbols-outlined"
-                id="f-line">minimize</span> Costruito a
+                id="fLine">minimize</span> Costruito a
             mano durante la prima settimana del corso Epicode
         </p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

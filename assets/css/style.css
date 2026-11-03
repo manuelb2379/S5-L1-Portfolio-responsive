@@ -44,7 +44,7 @@ header {
   font-family: "Inter", Arial, sans-serif;
 }
 
-#site-header {
+#siteHeader {
   background-image:
     linear-gradient(to bottom, rgba(24, 38, 77, 0.75), rgba(15, 23, 49, 0.85)),
     url(../img/header-bg.jpg);
@@ -55,8 +55,11 @@ header {
   color: #ffffff;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 30px 16px 20px 16px;
+  padding: 5px; /*modificato per rendere più piccola header per fare header sticky*/
   border-bottom: 4px solid hsl(45, 90%, 60%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /*largezza main*/
@@ -74,7 +77,7 @@ h3 {
   line-height: 1.7;
 }
 /*nav*/
-#site-header nav ul {
+#siteHeader nav ul {
   display: inline-block;
   padding: 0 12px;
   margin: 0;
@@ -111,7 +114,7 @@ nav ul li:hover a {
 }
 /*sottotilo header*/
 .tagline {
-  margin: 50px auto;
+  margin: 20px auto; /*modificato per rendere più piccola header per fare header sticky*/
   color: #f0e7c8;
   font-style: italic;
 }
@@ -119,7 +122,9 @@ nav ul li:hover a {
 /*h1*/
 #start {
   font-size: clamp(2rem, 8vw, 60px);
+  margin: 10px; /*inserito per rendere più piccola header per fare header sticky*/
 }
+
 /*elemento prima ogni di h2*/
 section h2::before {
   content: "\2756";
@@ -134,6 +139,7 @@ section {
   border-radius: 10px;
   background-color: #ffffff;
   padding: 20px;
+  scroll-margin-top: 250px;/*si mette quando */
 }
 
 section h2 {
@@ -163,17 +169,17 @@ section h2 {
 nella prima in mobile non c'è*/
 
 /*tabella competenze*/
-.comp-title {
+.compTitle {
   color: hsl(220, 30%, 40%);
   font-style: italic;
 }
 
-#f-line {
+#fLine {
   text-align: center;
   vertical-align: baseline;
 }
 
-.comp-tab {
+.compTab {
   color: hsl(220, 60%, 30%);
   text-align: start;
 }
@@ -183,15 +189,15 @@ nella prima in mobile non c'è*/
   border-collapse: collapse;
 }
 
-.table-wrapper{
-    overflow-x: auto;
+.tableWrapper {
+  overflow-x: auto;
 }
 
-.table-wrapper .table {
+.tableWrapper .table {
   min-width: 480px;
 }
 
-#table-com th {
+#tableCom th {
   width: 50%;
   border-bottom: 1px solid #ece6d8;
   background-color: #f9f5ea;
@@ -203,22 +209,23 @@ nella prima in mobile non c'è*/
   border-bottom: 1px solid #ece6d8;
 }
 /*tabella esperienze*/
-#cap-e {
+#capE {
   color: hsl(220, 30%, 40%);
   font-style: italic;
 }
 
-#e-tab th {
+#eTab th {
   color: hsl(220, 60%, 25%);
   border-bottom: 1px solid #ece6d8;
   background-color: #ece6d8;
 }
 
-#e-tab td,
-#e-tab th {
+#eTab td,
+#eTab th {
   width: 33.33%;
 }
-/*barre della tabella competenze*/
+
+/*barre della tabella competenze
 .bar {
   background-color: #ece6d8;
   border-radius: 6px;
@@ -231,7 +238,8 @@ nella prima in mobile non c'è*/
   background-color: hsl(45, 90%, 50%);
   height: 100%;
   border-radius: 6px;
-}
+}*/
+
 /*sistemazione celle di sx tabella competenze*/
 .blue {
   margin-right: 12px;
@@ -247,6 +255,12 @@ nella prima in mobile non c'è*/
 }
 
 /* card progetti e link*/
+
+/*S5 L2 Project reso relative per spostare badge con position absolute*/
+.project {
+  position: relative;
+}
+
 .project:nth-of-type(odd) {
   border-left: 5px solid hsl(220, 60%, 30%);
   background-color: #f9f5ea;
@@ -307,7 +321,7 @@ nella prima in mobile non c'è*/
 input,
 textarea,
 select {
-    /*rimosso il width per darlo anche al button*/
+  /*rimosso il width per darlo anche al button*/
   background-color: #fbf8f1;
   border-radius: 2px;
   border: 1px solid #d6cfbf;
@@ -320,7 +334,7 @@ button {
   width: 100%;
   font-size: 16px;
 }
- 
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -340,7 +354,7 @@ label {
   color: white;
   background-color: hsl(220, 60%, 30%);
   font-weight: bold;
- /*rimosso width per poi portarlo a 768px*/
+  /*rimosso width per poi portarlo a 768px*/
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
@@ -352,7 +366,7 @@ label {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 /* footer */
-#site-footer {
+#siteFooter {
   background-color: hsl(220, 40%, 15%);
   color: white;
   text-align: center;
@@ -360,14 +374,14 @@ label {
   padding: 40px;
 }
 
-.icon-foot {
+.iconFoot {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
   text-align: center;
 }
 
-.icon-foot li {
+.iconFoot li {
   background-color: rgba(255, 255, 255, 0.08);
   width: 50px;
   height: 50px;
@@ -379,13 +393,13 @@ label {
   line-height: 2.1;
 }
 
-.icon-foot li a {
+.iconFoot li a {
   display: block;
   color: white;
   text-decoration: none;
 }
 
-.icon-foot li:hover {
+.iconFoot li:hover {
   background-color: hsl(220, 60%, 45%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
@@ -399,31 +413,111 @@ label {
   text-align: center;
   color: hsl(220, 60%, 25%);
 }
-.thank-you a {
+.thankYou a {
   color: hsl(220, 60%, 30%);
   text-decoration: underline hsl(45, 90%, 50%);
 }
 
-.thank-you {
+.thankYou {
   min-height: 70vh;
 }
+/*aggiunte S5 L2*/
+/*inserimento bottone per tornare su*/
+#paginaSu {
+  background: url("https://www.alessandracagalli-psicologa.it/wp-content/uploads/2015/10/alessandracagalli-psicologa-torna-su-13.png");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+}
 
-/*inserimento media query per 768px*/
+#paginaSu:hover {
+  background-color: hsl(45, 90%, 50%);
+  border-radius: 50%;
+}
+
+/*spostamento badge new delle card*/
+
+.new {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*modale del form*/
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+
+.modale {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gainsboro;
+  padding: 25px;
+  border-radius: 5px;
+  max-width: 450px;
+}
+
+.posizioneChiusura {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: gainsboro;
+  color: black;
+  height: auto;
+  width: auto;
+}
+
+.posizioneChiusura:hover{
+  background-color: red;
+  color: white;
+}
+
+#apriModale {
+  color: white;
+  background-color: hsl(220, 60%, 30%);
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#apriModale:hover{
+  background-color: #2F3A5D;
+  cursor: pointer;
+}
+
+.chiudiModale{
+  cursor: pointer;
+}
+
+
+/*inserimento media query per 768px S5 L1*/
 
 @media (min-width: 768px) {
-    #site-header{
-        padding: 60px 20px 30px 20px;
-    }
+  #siteHeader {
+    padding: 5px;
+  }
 
-    main{
-        padding: 40px 20px;
-    }
+  main {
+    padding: 40px 20px;
+  }
 
-    main section {
+  main section {
     padding: 32px;
   }
 
-    .avatar {
+  .avatar {
     float: left; /* l'avatar torna a sinistra del testo una volta che passa 768px*/
     margin: 0 20px;
   }
@@ -431,22 +525,21 @@ label {
   input,
   textarea,
   select {
-    width: 60%; 
+    width: 60%;
   }
 
-   button {
+  button {
     width: 50%;
   }
- 
+
   /*re inserimento della first letter*/
   .intro::first-letter {
-  font-family: "Playfair Display", Georgia, serif;
-  color: hsl(220, 60%, 25%);
-  font-size: 3rem;
-  font-weight: bold;
-  float: left;
-  margin-right: 6px;
-  line-height: 0.5;
-}
-
+    font-family: "Playfair Display", Georgia, serif;
+    color: hsl(220, 60%, 25%);
+    font-size: 3rem;
+    font-weight: bold;
+    float: left;
+    margin-right: 6px;
+    line-height: 0.5;
+  }
 }
