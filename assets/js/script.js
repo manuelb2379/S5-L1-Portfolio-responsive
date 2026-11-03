@@ -18,6 +18,11 @@ chiudiModale.addEventListener('click', (e) => {
 	overlay.style.display = 'none';
 });
 
+overlay.addEventListener('click', (e) => {
+	if(e.target === overlay)
+	overlay.style.display = 'none';
+});
+
 myForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	window.location.href = 'grazie.html';
